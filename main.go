@@ -127,7 +127,7 @@ func (apiCfg apiConfig) handlerUpdateUser(w http.ResponseWriter, r *http.Request
 		respondWithError(w, http.StatusBadRequest, err)
 		return
 	}
-	jsonData, err := json.Marshal(user)
+	jsonData, _ := json.Marshal(user)
 	respondWithJSON(w, http.StatusOK, string(jsonData))
 
 }
