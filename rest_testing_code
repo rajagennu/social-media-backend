@@ -1,0 +1,40 @@
+
+POST http://localhost:8080/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "12345",
+    "name": "john doe",
+    "age": 18
+
+}
+
+
+
+GET http://localhost:8080/users/test@example.com
+
+
+PUT http://localhost:8080/users/test@example.com HTTP/1.1
+content-type: application/json
+
+{
+    "password": "123456",
+    "name": "john dddoe",
+    "age": 18
+
+}
+
+POST http://localhost:8080/posts/ HTTP/1.1
+content-type: application/json
+
+{
+    "useremail": "test@example.com",
+    "text" : "this is post2"
+
+}
+
+
+GET http://localhost:8080/posts/test@example.com
+
+DELETE http://localhost:8080/posts/559a1fcf-ab13-418e-9f80-bfe2979535fa
